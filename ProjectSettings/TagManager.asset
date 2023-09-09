@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
   - Food
+  - Wall
+  - Super
+  - Bomb
   layers:
   - Default
   - TransparentFX

@@ -4,10 +4,10 @@ using UnityEngine;
 using TMPro;
 
 
-public class Food : MonoBehaviour
+public class Super : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D foodSpawn;
-    private int score;
+    public float score;
     public TextMeshProUGUI scoreText;
     
 
@@ -39,23 +39,11 @@ public class Food : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
-        {     
-            if(this.gameObject.tag == "Food")
-            {
-                RandomPose();
-                score += 1;
-            }        
-           else if(this.gameObject.tag == "Super")
-            {
-                RandomPose();
-                score += 2;
-            }
+        {
           
-            else if(this.gameObject.tag == "Bomb")
-            {
-                RandomPose();
-                score -= 1;
-            }
+          RandomPose();
+          score = score + 2;
+            
         }
     }
 }
